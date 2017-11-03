@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.php.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/php-project/1">
+            <name>Electrogroup</name>
+        </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>actualizar</word>
+            <word>Administrador</word>
+            <word>agregar</word>
+            <word>articulo</word>
+            <word>buscar</word>
+            <word>cancelar</word>
+            <word>catalogo</word>
+            <word>Cliente</word>
+            <word>comprar</word>
+            <word>eliminar</word>
+            <word>filtrar</word>
+            <word>iniciar</word>
+            <word>pedido</word>
+            <word>registar</word>
+            <word>sesion</word>
+            <word>usuario</word>
+        </spellchecker-wordlist>
+    </configuration>
+</project>

@@ -1,0 +1,19 @@
+Cliente
+* iniciar sesion *
+* registrar usuario *
+* comprar 
+* filtrar articulo en catalogo
+* buscar articulo
+* actualizar usuario
+* eliminar usuario *
+* cancelar pedido
+* 
+
+Administrador
+* agregar articulo *
+* eliminar articulo *
+* actualizar articulo *
+* actualizar pedido 
+* actualizar catalogo
+* agregar catalogo
+* 
