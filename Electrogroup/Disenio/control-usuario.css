@@ -1,0 +1,115 @@
+body{
+	padding-top: 80px; 
+	background-color: #F2F2F2;
+}
+
+/*Barra fija*/
+.navbar-custom{
+	background-color: #FAFAFA;
+	border-bottom: 1px solid #D8D8D8;
+}
+.navbar-custom .btn{
+	background-color: #F781F3;
+	color:#FFFFFF;
+	border: 1px solid #F781F3;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 0 2px 2px 0;
+}
+.navbar-custom .btn:hover {
+	background-color: #FF00FF;
+	border: 1px solid #FF00FF;
+	color:#FFFFFF;
+}
+.navbar-custom .nav-link{
+	color:#2E2E2E;
+	font-family: 'Roboto', sans-serif;
+}
+.navbar-custom .carrito-custom{
+	margin-left: 30px;
+}
+.navbar-custom .form-control{
+	border-color:#F781F3;
+	border-radius: 2px 0 0 2px;
+}
+.navbar-custom .form-control:focus{
+	border-color:#FFFFFF;
+	box-shadow: 0 0 1em #F781F3;
+}
+
+.btn-modal-custom{
+	background-color: transparent;
+	border:none;
+}
+/*Barra fija*/
+
+/*Barra categorias*/
+.nav-custom{
+	width:100%;
+	background-color:#FAFAFA;
+	border-bottom: 1px solid #D8D8D8;
+}
+.nav-custom .nav-link{
+	color:#2E2E2E;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 13px;
+}
+/*Barra categorias*/
+
+/* */
+.col-custom1{
+	background-color: #FAFAFA;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-right: 1px solid #D8D8D8;
+}
+.col-custom1 .nav-link.active{
+	color: #FF00FF;
+	background-color: #D8D8D8;
+}
+.col-custom1 .nav-link{
+	color: #585858;
+}
+.col-custom1 .nav-link.active:focus{
+	background-color: #D8D8D8;
+}
+
+.col-custom{
+	margin-left: 40px;
+	margin-right: 0px;
+}
+.col-custom2{
+	border: 1px solid #D8D8D8;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-color: #FAFAFA;
+}
+
+.title-custom{
+	padding-left: 0px;
+	margin-top: 10px;
+}
+
+.text-custom{
+	margin-top: 10px;
+	text-align: left;
+}
+/* */
+
+/*Footer*/
+.footer-custom{
+	background-color: #FAFAFA;
+	width: 100%;
+	border-top: 1px solid #D8D8D8;
+}
+.footer-custom .img-redes{
+	padding-top: 50px;
+	padding-left: 80px;
+	margin-left: 100px;
+	align-items: center;
+}
+.footer-custom .col-text{
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	padding-top: 30px;
+}
+/*Footer*/

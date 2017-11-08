@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "ferminrobilotte";
 $password= "pincharata38531662";
@@ -27,7 +28,8 @@ while ($result = mysqli_fetch_object($rec)){
 }
 
 if($verificar == 1){
-    echo "usted ha iniciado sesion";
+header ("Location: ../../Disenio/principal.php");
+$_SESSION['email'] = $email;
 } else{
     echo "la contraeña o el email no son de un usuario registrado";
 }

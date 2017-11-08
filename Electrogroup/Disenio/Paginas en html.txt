@@ -1,0 +1,10 @@
+.Pagina principal 
+	-Pagina principal con inicio de sesion *
+	-Pagina principal con cuenta iniciada *
+.Pagina usuario-control *
+.Pagina registro exitoso *
+.Pagina carrito de compras
+.Pagina articulo
+.Pagina busqueda de articulos
+
+
