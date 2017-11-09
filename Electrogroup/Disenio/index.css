@@ -40,6 +40,10 @@ body{
 	background-color: transparent;
 	border:none;
 }
+.btn-modal-custom:focus{
+	box-shadow: none;
+	border-color: none;
+}
 /*Barra fija*/
 
 /*MODAL*/
@@ -62,7 +66,6 @@ body{
 /*MODAL*/
 
 /*Popuver*/
-
 /*Popuver*/
 
 /*Barra categorias*/

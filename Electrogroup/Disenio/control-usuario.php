@@ -15,11 +15,11 @@ if (!isset($_SESSION['email'])) {
 
     <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="control-usuario.css" type="text/css">
+    <link rel="stylesheet" href="control-usuario.css?ts=<?=time()?>&quot;" type="text/css">
     <!--CSS-->
 
     <!--FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu:500|Slabo+27px" rel="stylesheet">
     <!--FONTS-->
 
     <!--JS-->
@@ -117,7 +117,38 @@ if (!isset($_SESSION['email'])) {
                                 <h4>Mis datos</h4>
                             </div>
                             <div class="col-10 col-custom2">
-                                mis datos
+                                <div class="container datos-custom">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="row align-items-start">
+                                                <div class="col-12 col-custom-datos">
+                                                    <h6>Nombre:</h6>
+                                                </div>
+                                                <div class="col-12 col-custom-datos">
+                                                    <h6>Numero de documento:</h6>
+                                                </div>
+                                                <div class="col-12 col-custom-datos">
+                                                    <h6>Email:</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="row">
+                                                <div class="col-12 col-custom-datos">
+                                                    <h6>Apellido:</h6>
+                                                </div>
+                                                <div class="col-12 col-custom-datos">
+                                                    <h6>Telefono:</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <button class="btn" data-toggle="modal" data-target="#modal-usuario">
+                                            Actualizar datos
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-10 title-custom">
                                 <h4>Modificar contraseña</h4>
@@ -134,7 +165,36 @@ if (!isset($_SESSION['email'])) {
             </div>
         </div>
     </div>
-    <!--control-usuario-->    
+    <!--control-usuario-->
+
+    <!--Modal actualizar usuario-->
+    <div class="modal fade mod-usuario" id="modal-usuario" tabindex="-1" role="dialog" aria-labelledby="modal-usuario" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Actualizar datos</h5>
+                    <button class="close" id="close1" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="../Logica/Usuarios/Actualizar_usuario/actualizar_usuario.php" method="post" class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido">
+                        <label for="dni">DNI</label>
+                        <input type="text" class="form-control" name="dni" id="dni">
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" class="form-control" name="telefono" id="telefono">
+                        <label></label>
+                        <button class="btn btn-block">Actualizar datos</button>
+                    </form>
+                </div>
+            </div>          
+        </div>
+    </div>
+    <!--Modal actualizar usuario--> 
 
     <!--FOOTER -->
     <div class="container-fluid footer-custom">

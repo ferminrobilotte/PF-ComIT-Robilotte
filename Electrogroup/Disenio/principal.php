@@ -12,7 +12,7 @@ session_start();
 
     <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="index.css?ts=<?=time()?>&quot;" type="text/css">
     <!--CSS-->
 
     <!--FONTS -->
