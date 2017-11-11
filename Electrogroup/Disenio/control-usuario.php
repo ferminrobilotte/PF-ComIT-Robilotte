@@ -3,6 +3,7 @@ session_start();
 if (!isset($_SESSION['email'])) {
     header("Location: principal.php");
 }
+require '../Logica/Usuarios/Mostrar_Datos/mostrar_datos.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,7 +42,7 @@ if (!isset($_SESSION['email'])) {
         </button>
 
         <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-            <a href="principal.html" class="navbar-brand">
+            <a href="principal.php" class="navbar-brand">
                 <img class="img-fluid" src="Captura.png" width="70" height="60" alt="logo">
             </a>
             <form class="form-inline" type="search" placeholder="Search" aria-label="Search">
@@ -72,22 +73,22 @@ if (!isset($_SESSION['email'])) {
     <div class="container-fluid nav-custom">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link" href="#" id="informatica" >TV e Informatica</a>
+                <a class="nav-link anim-underline" href="busqueda.php" id="informatica" ><strong>TV e Informatica</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="electrodomesticos" href="#">Electrodomesticos y Climatizacion</a>
+                <a class="nav-link anim-underline" id="electrodomesticos" href="busqueda.php"><strong>Electrodomesticos y Climatizacion</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="salud" href="#">Cuidado personal y Salud</a>
+                <a class="nav-link anim-underline" id="salud" href="busqueda.php"><strong>Cuidado personal y Salud</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="lavado" href="#">Lavado y Limpieza</a>
+                <a class="nav-link anim-underline" id="lavado" href="busqueda.php"><strong>Lavado y Limpieza</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="cocina" href="#">Cocina, Heladeras y Freezers</a>
+                <a class="nav-link anim-underline" id="cocina" href="busqueda.php"><strong>Cocina, Heladeras y Freezers</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="otros" href="#">Otros</a>
+                <a class="nav-link anim-underline" id="otros" href="busqueda.php"><strong>Otros</strong></a>
             </li>
         </ul>
     </div>
@@ -105,13 +106,13 @@ if (!isset($_SESSION['email'])) {
             </div>
             <div class="col col-custom">
                 <div class="tab-content tab-custom" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     Lore ipsum
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                     Lore lore
                     </div>
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="tab-pane fade show active" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                         <div class="row">
                             <div class="col-10 title-custom">
                                 <h4>Mis datos</h4>
@@ -123,12 +124,23 @@ if (!isset($_SESSION['email'])) {
                                             <div class="row align-items-start">
                                                 <div class="col-12 col-custom-datos">
                                                     <h6>Nombre:</h6>
+                                                    <?php if(!empty($nombre)){?>
+                                                    <p><?php echo $nombre ?></p>
+                                                    <?php } else {?>
+                                                    <p>-</p>
+                                                    <?php };?>
                                                 </div>
                                                 <div class="col-12 col-custom-datos">
                                                     <h6>Numero de documento:</h6>
+                                                    <?php if(!empty($dni)){?>
+                                                    <p><?php echo $dni ?></p>
+                                                    <?php } else {?>
+                                                    <p>-</p>
+                                                    <?php };?>
                                                 </div>
                                                 <div class="col-12 col-custom-datos">
                                                     <h6>Email:</h6>
+                                                    <?php echo $email ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -136,9 +148,19 @@ if (!isset($_SESSION['email'])) {
                                             <div class="row">
                                                 <div class="col-12 col-custom-datos">
                                                     <h6>Apellido:</h6>
+                                                    <?php if(!empty($apellido)){?>
+                                                    <p><?php echo $apellido ?></p>
+                                                    <?php } else {?>
+                                                    <p>-</p>
+                                                    <?php };?>
                                                 </div>
                                                 <div class="col-12 col-custom-datos">
-                                                    <h6>Telefono:</h6>
+                                                    <h6>Telefono:</h6> 
+                                                    <?php if(!empty($telefono)){?>
+                                                    <p><?php echo $telefono ?></p>
+                                                    <?php } else {?>
+                                                    <p>-</p>
+                                                    <?php };?>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,10 +175,21 @@ if (!isset($_SESSION['email'])) {
                             <div class="col-10 title-custom">
                                 <h4>Modificar contraseña</h4>
                             </div>
-                            <div class="col-4 col-custom2">
-                                <div class="text-custom">
-                                    <h6>Contraseña:</h6>
-                                    <p><strong>xxxxxxxx</strong></p>
+                            <div class="col-6 col-custom2">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-custom">
+                                                <h6>Contraseña:</h6>
+                                                <p><strong>xxxxxxxx</strong></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn" data-toggle="modal" data-target="#modal-contraseña">
+                                            Modificar contraseña
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -180,21 +213,55 @@ if (!isset($_SESSION['email'])) {
                 <div class="modal-body">
                     <form action="../Logica/Usuarios/Actualizar_usuario/actualizar_usuario.php" method="post" class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre">
+                        <input type="text" class="form-control nombreusuario" name="nombre" id="nombre">
                         <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control" name="apellido" id="apellido">
+                        <input type="text" class="form-control apellidousuario" name="apellido" id="apellido">
                         <label for="dni">DNI</label>
-                        <input type="text" class="form-control" name="dni" id="dni">
+                        <input type="text" class="form-control dniusuario" name="dni" id="dni">
                         <label for="telefono">Telefono</label>
-                        <input type="tel" class="form-control" name="telefono" id="telefono">
+                        <input type="tel" class="form-control telefonousuario" placeholder="Sin espacios, ni guiones" name="telefono" id="telefono">
                         <label></label>
-                        <button class="btn btn-block">Actualizar datos</button>
+                        <button class="btn btn-block" id="send">Actualizar datos</button>
+                        <?php if(!empty($errores)): ?>
+                            <div>
+                                <ul>
+                                    <?php echo $errores; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
                     </form>
                 </div>
             </div>          
         </div>
     </div>
-    <!--Modal actualizar usuario--> 
+    <!--Modal actualizar usuario-->
+
+    <!--Modal actualizar contraseña-->
+    <div class="modal fade mod-usuario" id="modal-contraseña" tabindex="-1" role="dialog" aria-labelledby="modal-contraseña" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="">Actualizar contraseña</h5>
+                    <button class="close" id="close1" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="../Logica/Usuarios/Actualizar_usuario/actualizar_contrasenia.php" method="post" class="form-group">
+                        <label for="nombre">Contraseña actual</label>
+                        <input type="password" class="form-control contraseña-actual" name="contraseña-actual" id="contraseña-actual">
+                        <label for="apellido">Contraseña nueva</label>
+                        <input type="password" class="form-control contraseña-nueva" placeholder="Contraseña de 8 o mas digitos" name="contraseña-nueva" id="contraseña-nueva">
+                        <label for="dni">Repetir contraseña</label>
+                        <input type="password" class="form-control repetir-contraseña" name="repetir-contraseña" id="repetir-contraseña">
+                        <label></label>
+                        <button class="btn btn-block" id="send-contraseña">Actualizar contraseña</button>
+                    </form>
+                </div>
+            </div>          
+        </div>
+    </div>
+    <!--Modal actualizar contraseña--> 
 
     <!--FOOTER -->
     <div class="container-fluid footer-custom">

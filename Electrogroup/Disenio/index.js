@@ -2,7 +2,7 @@ $(function(){
 	$('#btn-registro').click(function(){
 		$(".mod-usuario").modal("hide");
 	});
-	$('#send').click(function() {
+	$('#send').click(function(e) {
         var sEmail = $('.email-usuario').val();
         if ($.trim(sEmail).length == 0) {
             alert('Please enter valid email address');
@@ -13,7 +13,7 @@ $(function(){
             e.preventDefault();
         }
     });
-    $("#send").click(function(){
+    $("#send").click(function(e){
     	var contraseña1= $(".contraseña-usuario").val();
     	var contraseña2= $(".repetir-contraseña").val();
     	if($.trim(contraseña1).length==0 || $.trim(contraseña1).length<8){

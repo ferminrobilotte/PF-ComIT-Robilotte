@@ -1,6 +1,11 @@
+html{
+    position: relative; 
+    min-height: 100%;
+}
 body{
 	padding-top: 80px; 
 	background-color: #F2F2F2;
+	padding-bottom: 181px;
 }
 
 /*Barra fija*/
@@ -79,6 +84,29 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 13px;
 }
+.anim-underline {
+  position: relative;
+}
+.anim-underline:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.7px;
+  width: 100%;
+  background-color: #FF00FF;
+  animation: width 0.5s;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  border-radius: 2px;
+}
+.anim-underline:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
 /*Barra categorias*/
 
 /*Carousel*/
@@ -124,6 +152,7 @@ body{
 	box-shadow: 0 0 1em #D8D8D8;
 	padding-right: 0px;
 	padding-left: 0px;
+	margin-bottom: 40px;
 }
 .img-custom img{
 	width: 100%;
@@ -136,12 +165,61 @@ body{
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
+.container-card h2{
+	margin-bottom: 15px;
+	margin-left: 15px;
+	font-family: 'Ubuntu', sans-serif;
+	text-shadow: 1.5px 1.5px #D8D8D8;
+}
 .container-card .card{
 	padding:10px;
 	box-shadow: 0 0 1em #D8D8D8;
 }
-.card:hover{
+.card{
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+}
+.container-card .card-text{
+	color: #B40404;
+}
+/*.card:hover{
 	border: 1px solid #FF00FF;
+}*/
+.card:hover img{
+	opacity: 0.1;
+}
+.card:hover .card-tittle{
+	visibility: hidden;
+}
+
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #FF00FF;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
+.card:hover .img__description_layer{
+	visibility: visible;
+  	opacity: 1;
+}
+.card:hover .img__description {
+  transform: translateY(0);
 }
 /*Productos*/
 
@@ -151,6 +229,8 @@ body{
 	width: 100%;
 	border-top: 1px solid #D8D8D8;
 	margin-top: 50px;
+	bottom: 0;
+    position: absolute;
 }
 .footer-custom .img-redes{
 	padding-top: 50px;

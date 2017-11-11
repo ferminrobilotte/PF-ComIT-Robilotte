@@ -1,5 +1,6 @@
 <?php
 session_start();
+require '../Logica/Articulos/Mostrar_art/mostrar_art.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,12 +40,12 @@ session_start();
         </button>
 
         <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-            <a href="principal.html" class="navbar-brand">
+            <a href="principal.php" class="navbar-brand">
                 <img class="img-fluid" src="Captura.png" width="70" height="60" alt="logo">
             </a>
             <form class="form-inline" type="search" placeholder="Search" aria-label="Search">
-                <input class="form-control" type="search" size="60" placeholder="¿Qué estás buscando?" aria-label="Search">
-                <button class="btn btn-outline" type="submit"><img src="Vectores/lupa2.png" width="20" height="20"></button>
+                <input class="form-control" type="search" size="60" placeholder="¿Qué estás buscando?" aria-label="Search" name="busqueda">
+                <button class="btn btn-outline" type="button" onclick="location.href='busqueda.php'"><img src="Vectores/lupa2.png" width="20" height="20"></button>
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -78,6 +79,7 @@ session_start();
             </ul>
         </div>
       </nav>
+
         <!--Ventana inicio sesion-->
       <div class="modal fade mod-usuario" id="modal-usuario" tabindex="-1" role="dialog" aria-labelledby="modal-usuario" aria-hidden="true">
         <div class="modal-dialog">
@@ -134,6 +136,7 @@ session_start();
           </div>
       </div>
       <!--Ventana registro-->
+
     </div>
     <!--Fin barra fija-->
 
@@ -141,22 +144,22 @@ session_start();
     <div class="container-fluid nav-custom">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link" href="#" id="informatica" >TV e Informatica</a>
+                <a class="nav-link anim-underline" href="busqueda.php" id="informatica" ><strong>TV e Informatica</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="electrodomesticos" href="#">Electrodomesticos y Climatizacion</a>
+                <a class="nav-link anim-underline" id="electrodomesticos" href="busqueda.php"><strong>Electrodomesticos y Climatizacion</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="salud" href="#">Cuidado personal y Salud</a>
+                <a class="nav-link anim-underline" id="salud" href="busqueda.php"><strong>Cuidado personal y Salud</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="lavado" href="#">Lavado y Limpieza</a>
+                <a class="nav-link anim-underline" id="lavado" href="busqueda.php"><strong>Lavado y Limpieza</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="cocina" href="#">Cocina, Heladeras y Freezers</a>
+                <a class="nav-link anim-underline" id="cocina" href="busqueda.php"><strong>Cocina, Heladeras y Freezers</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="otros" href="#">Otros</a>
+                <a class="nav-link anim-underline" id="otros" href="busqueda.php"><strong>Otros</strong></a>
             </li>
         </ul>
     </div>
@@ -208,44 +211,57 @@ session_start();
     </div>
     <!-- -->
 
-    <!-- -->
+    <!--Productos-->
     <div class="container container-card">
+        <h2>Electrodomesticos y Climatizacion</h2>
         <div class="row">
             <div class="col">
                 <div class="card-group">
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- -->
+    <!--Productos-->
 
     <!-- -->
     <div class="container img-custom">
@@ -257,83 +273,109 @@ session_start();
     </div>
     <!-- -->
 
-    <!-- -->
+    <!--Productos-->
     <div class="container container-card">
+        <h2>TV e Informatica</h2>
         <div class="row">
             <div class="col">
                 <div class="card-group">
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
-                        <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
+                        <div class="card-busqueda.phpblock">
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$120000</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- -->
+    <!--Productos-->
 
-    <!-- -->
+    <!--Productos-->
      <div class="container container-card">
+        <h2>Cocinas, Heladeras y Freezers</h2>
         <div class="row">
             <div class="col">
                 <div class="card-group">
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                     <div class="card">
                         <img src="Vectores/notebook.png" class="card-image-top img-fluid">
+                        <div class="img__description_layer">
+                            <h5 class="img__description"><a href="articulo.php">Encabezado</a></h5>
+                        </div>
                         <div class="card-block">
-                            <h1 class="card-tittle">Encabezado</h1>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt natus, odit eius impedit provident fugiat voluptatum, doloremque repudiandae nemo aspernatur delectus quas, placeat alias animi pariatur culpa sunt asperiores, et!</p>
+                            <h5 class="card-tittle">Encabezado</h5>
+                            <h3 class="card-text">$12000</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>   
-    <!-- -->
+    <!--Productos-->
 
     <!-- -->
     <div class="container img-custom">
