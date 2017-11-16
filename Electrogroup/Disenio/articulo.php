@@ -164,10 +164,119 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
         </ul>
     </div>
     <!--Fin Barra de categorias-->
+    
+    <!--Marcas-->
+    <div class="container">
+        <div class="marcas">
+            <a href="principal.php">Electrogroup</a> > <a href=""><?php echo $categoria ; ?></a> > <a href=""><?php echo $marca ; ?></a> > <p><?php echo $nombre ; ?></p> 
+        </div>
+    </div>
+    <!--Marcas-->
 
-    <?php
-        echo $nombre;
-    ?>
+    <!--Producto-->
+    <div class="container articulo-custom">
+        <div class="row">
+            <div class="col-9 col-img">
+                <img  src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen ; ?>">
+            </div>
+            <div class="col-3 col-inf">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="nombre">
+                            <p><?php echo $nombre ; ?></p>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="precio">
+                            <p>$<?php echo $precio ; ?></p>
+                        </div>
+                        <div class="container cuotas">
+                            <p class="jumbotron">
+                                Proximamente, compre en cuotas
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-comprar">
+                        <button type="button" class="btn btn-primary btn-lg btn-block comprar-custom">Comprar</button>
+                        <hr>
+                    </div>
+                    <div class="col-12 envios">
+                        <img src="Vectores/delivery.png" width="30" height="30">
+                        <p>Envios a todo el país</p>
+                    </div>
+                    <div class="col retiro">
+                        <img src="Vectores/shop.png" width="25" height="23">
+                        <p>Retira gratis por nuestro local</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Producto-->
+
+    <!--Te puede interesar-->
+    <div class="container mas-art">
+        <div class="row">
+            <div class="col-12">
+                <h2>Tambien te puede interesar</h2>
+                <hr>
+            </div>
+            <div class="col-12">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <div class="card">
+                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen1 ; ?>">
+                            <div class="img__description_layer">
+                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id1 ?>"><?php echo $nombre1;?></a></h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-tittle"><?php echo $nombre1;?></h5>
+                                <h3 class="card-text">$ <?php echo $precio1;?></h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="card">
+                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen2 ; ?>">
+                            <div class="img__description_layer">
+                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id2 ?>"><?php echo $nombre2;?></a></h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-tittle"><?php echo $nombre2;?></h5>
+                                <h3 class="card-text">$ <?php echo $precio2;?></h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="card">
+                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen3 ; ?>">
+                            <div class="img__description_layer">
+                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id3 ?>"><?php echo $nombre3;?></a></h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-tittle"><?php echo $nombre3;?></h5>
+                                <h3 class="card-text">$ <?php echo $precio3;?></h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <div class="card">
+                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen4 ; ?>">
+                            <div class="img__description_layer">
+                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id4 ?>"><?php echo $nombre4;?></a></h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-tittle"><?php echo $nombre4;?></h5>
+                                <h3 class="card-text">$ <?php echo $precio4;?></h3>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Te puede interesar-->
 
     <!--FOOTER -->
     <div class="container-fluid footer-custom">

@@ -220,7 +220,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
             <div class="col">
                 <div class="card-group">
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/ELECTRODOMESTICOS-CLIMATIZACION/<?php echo $imagen1 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen1 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id1 ?>"><?php echo $nombre1;?></a></h5>
                         </div>
@@ -230,7 +230,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/ELECTRODOMESTICOS-CLIMATIZACION/<?php echo $imagen2 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen2 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id2 ?>"><?php echo $nombre2;?></a></h5>
                         </div>
@@ -240,7 +240,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/ELECTRODOMESTICOS-CLIMATIZACION/<?php echo $imagen3 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen3 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id3 ?>"><?php echo $nombre3;?></a></h5>
                         </div>
@@ -250,7 +250,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/ELECTRODOMESTICOS-CLIMATIZACION/<?php echo $imagen4 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen4 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id4 ?>"><?php echo $nombre4;?></a></h5>
                         </div>
@@ -282,7 +282,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
             <div class="col">
                 <div class="card-group">
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/TV-INFORMATICA/<?php echo $imagen_1 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_1 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_1 ?>"><?php echo $nombre_1;?></a></h5>
                         </div>
@@ -292,7 +292,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/TV-INFORMATICA/<?php echo $imagen_2 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_2 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_2 ?>"><?php echo $nombre_2;?></a></h5>
                         </div>
@@ -302,7 +302,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/TV-INFORMATICA/<?php echo $imagen_3 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_3 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_3 ?>"><?php echo $nombre_3;?></a></h5>
                         </div>
@@ -312,7 +312,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/TV-INFORMATICA/<?php echo $imagen_4 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_4 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_4 ?>"><?php echo $nombre_4;?></a></h5>
                         </div>
@@ -334,7 +334,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
             <div class="col">
                 <div class="card-group">
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/COCINA-HELADERAS Y FREEZERS/<?php echo $imagen_coc1 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_coc1 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_coc1 ?>"><?php echo $nombre_coc1;?></a></h5>
                         </div>
@@ -344,7 +344,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/COCINA-HELADERAS Y FREEZERS/<?php echo $imagen_coc2 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_coc2 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_coc2 ?>"><?php echo $nombre_coc2;?></a></h5>
                         </div>
@@ -354,7 +354,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/COCINA-HELADERAS Y FREEZERS/<?php echo $imagen_coc3 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_coc3 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_coc3 ?>"><?php echo $nombre_coc3;?></a></h5>
                         </div>
@@ -364,7 +364,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/COCINA-HELADERAS Y FREEZERS/<?php echo $imagen_coc4 ; ?>" class="card-image-top img-fluid">
+                        <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_coc4 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
                             <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_coc4 ?>"><?php echo $nombre_coc4;?></a></h5>
                         </div>

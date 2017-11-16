@@ -23,3 +23,27 @@ while($result = mysqli_fetch_object($rec)){
 	$descripcion=$result->descripcion;
 	$stock=$result->stock;
 }
+
+$sql="SELECT * FROM articulo WHERE Categoria='$categoria' OR Marca='$marca' order by RAND() LIMIT 4";
+$rec= mysqli_query($conn, $sql);
+
+$row=mysqli_fetch_array($rec,MYSQLI_NUM);
+$id1=$row[0];
+$precio1=$row[1];
+$nombre1=$row[2];
+$imagen1=$row[5];
+$row=mysqli_fetch_array($rec,MYSQLI_NUM);
+$id2=$row[0];
+$precio2=$row[1];
+$nombre2=$row[2];
+$imagen2=$row[5];
+$row=mysqli_fetch_array($rec,MYSQLI_NUM);
+$id3=$row[0];
+$precio3=$row[1];
+$nombre3=$row[2];
+$imagen3=$row[5];
+$row=mysqli_fetch_array($rec,MYSQLI_NUM);
+$id4=$row[0];
+$precio4=$row[1];
+$nombre4=$row[2];
+$imagen4=$row[5];

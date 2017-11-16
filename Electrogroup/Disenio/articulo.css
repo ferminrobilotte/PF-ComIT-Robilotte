@@ -12,6 +12,7 @@ body{
 .navbar-custom{
 	background-color: #FAFAFA;
 	border-bottom: 1px solid #D8D8D8;
+	-webkit-backface-visibility: hidden;
 }
 .navbar-custom .btn{
 	background-color: #F781F3;
@@ -108,6 +109,173 @@ body{
   transform: scaleX(1);
 }
 /*Barra categorias*/
+
+/*Producto*/
+.marcas{
+	margin-top: 10px;
+	font-family: 'Roboto', sans-serif;
+}
+.marcas p{
+	display: inline;
+	font-size: 15px;
+}
+.marcas a{
+	color: #016AB3;
+	font-size: 15px;
+}
+.articulo-custom{
+	border: 1px solid #D8D8D8;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background-color: white;
+	box-shadow: 0 0 1em #D8D8D8;
+}
+.col-img{
+	padding-bottom: 20px;
+	padding-top: 25px;
+	padding-left: 0px;
+}
+.col-img img{
+	height: 500px;
+	width: 525px;
+	display: block;
+	margin:auto;
+
+}
+.col-inf{
+	padding-top: 25px;
+	padding-bottom: 20px;
+}
+.col-inf .nombre{
+	color: #000;
+	font-size: 28px;
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom: 10px;
+}
+.nombre p{
+	margin-left: 10px;
+}
+.col-inf .precio{
+	color: #D1030F;
+	font-size: 40px;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+}
+.precio p{
+	margin-bottom: 5px;
+}
+.col-inf .cuotas{
+	border: 1px solid #D8D8D8;
+	margin-bottom: 10px;
+}
+.cuotas .jumbotron{
+	margin-bottom: 0px;
+}
+.col-inf .comprar-custom{
+	background-color: #F781F3;
+	color:#FFFFFF;
+	border-color: transparent;
+	margin-top: 5px;
+}
+.col-inf .comprar-custom:hover{
+	background-color: #FF00FF;
+	border: 1px solid #FF00FF;
+	color:#FFFFFF;
+}
+.col-inf .envios{
+
+}
+.envios p{
+	display: inline;
+	margin-left: 5px;
+	font-family: 'Ubuntu', sans-serif;
+	color: #000;
+	font-size: 16px
+    letter-spacing: -.5px;	
+}
+.col-inf .retiro{
+	margin-top: 10px;
+}
+.retiro p{
+	display: inline;
+	margin-left: 5px;
+	font-family: 'Ubuntu', sans-serif;
+	color: #000;
+	font-size: 16px
+	letter-spacing: -.5px;
+}
+/*Producto*/
+
+/*Mar articulos*/
+.mas-art{
+	border: 1px solid #D8D8D8;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	background-color: white;
+	box-shadow: 0 0 1em #D8D8D8;
+	border-radius: 4px;
+}
+.mas-art h2{
+	margin-top: 10px;
+	font-family: 'Ubuntu', sans-serif;
+}
+.mas-art hr{
+	margin-top: 0px;
+}
+.card{
+	border-color: transparent;
+	width: 250px;
+}
+.card:hover{
+	border-color: #FF00FF;
+}
+.card:hover img{
+	opacity: 0.1;
+}
+.card:hover .card-tittle{
+	visibility: hidden;
+}
+
+.card img{
+	height: 211.25px;
+	width: 211.25px;
+}
+.card .card-tittle{
+	height: 40px;
+	font-size: 18px;
+}
+.card-text{
+	color: #B40404;
+}
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #FF00FF;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+.card:hover .img__description_layer{
+	visibility: visible;
+  	opacity: 1;
+}
+.card:hover .img__description {
+  transform: translateY(0);
+}
+/*Mas articulos*/
 
 /*Footer*/
 .footer-custom{
