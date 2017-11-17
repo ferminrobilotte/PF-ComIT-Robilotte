@@ -1,7 +1,21 @@
 <?php
 session_start();
-require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
+require 'conexion.php';
+$conn=conectar();
+//$valor=$_POST['precio'];
+$sql="SELECT * FROM articulo WHERE Categoria='Electrodomesticos' OR Categoria='Climatizacion'";
+//if($valor=='mayor'){
+  //  $sql="SELECT * FROM articulo WHERE Categoria LIKE '%$busqueda%' OR Marca LIKE '%$busqueda%' OR Nombre LIKE '%$busqueda%' ORDER BY Precio ASC";
+//};
+//if($valor=='menor'){
+  //  $sql="SELECT * FROM articulo WHERE Categoria LIKE '%$busqueda%' OR Marca LIKE '%$busqueda%' OR Nombre LIKE '%$busqueda%' ORDER BY Precio DESC";
+//};
+
+$rec= mysqli_query($conn, $sql);
+
+$cantidad= mysqli_num_rows($rec);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +27,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
 
     <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="articulo.css?ts=<?=time()?>&quot;" type="text/css">
+    <link rel="stylesheet" href="busqueda.css?ts=<?=time()?>&quot;" type="text/css">
     <!--CSS-->
 
     <!--FONTS -->
@@ -167,116 +181,59 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
     
     <!--Marcas-->
     <div class="container">
-        <div class="marcas">
-            <a href="principal.php">Electrogroup</a> > <a href=""><?php echo $categoria ; ?></a> > <a href=""><?php echo $marca ; ?></a> > <p><?php echo $nombre ; ?></p> 
+        <div class="row">
+            <div class="col-6 marcas">
+                <p><?php echo $cantidad; ?> resultados para </p><a href="principal.php">Electrogroup</a> > <p><a href="buscar-elec-cli.php">Electrodomesticos y Climatizacion</a></p>  
+            </div>
+            <!--<div class="col-6">
+                <form method="post" action="buscar.php">
+                <select type="submit" name="precio" id="precio">
+                    <option value="nombre">Nombre</option>
+                    <option value="menor">Menor precio</option>
+                    <option value="mayor">Mayor precio</option>
+                </select>
+                </form>
+            </div>-->
         </div>
+        <hr>
     </div>
     <!--Marcas-->
 
-    <!--Producto-->
-    <div class="container articulo-custom">
+    <!--Artiulos-->
+    <div class="container">
         <div class="row">
-            <div class="col-9 col-img">
-                <img  src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen ; ?>">
-            </div>
-            <div class="col-3 col-inf">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="nombre">
-                            <p><?php echo $nombre ; ?></p>
+                <?php 
+                if ($cantidad==0){ 
+                    ?>
+                    <div class="container">
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading">No hay resultados para esta busqueda</h4>
                             <hr>
+                            <p>-<strong>Revise la ortografia de</strong> la palabra</p>
+                            <p>-Utilice <strong>palabras mas genericas</strong> en su busqueda</p>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="precio">
-                            <p>$<?php echo $precio ; ?></p>
-                        </div>
-                        <div class="container cuotas">
-                            <p class="jumbotron">
-                                Proximamente, compre en cuotas
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-comprar">
-                        <button type="button" class="btn btn-primary btn-lg btn-block comprar-custom">Comprar</button>
-                        <hr>
-                    </div>
-                    <div class="col-12 envios">
-                        <img src="Vectores/delivery.png" width="30" height="30">
-                        <p>Envios a todo el país</p>
-                    </div>
-                    <div class="col retiro">
-                        <img src="Vectores/shop.png" width="25" height="23">
-                        <p>Retira gratis por nuestro local</p>
-                    </div>
-                </div>
-            </div>
+                <?php } else{
+                    while ($row=mysqli_fetch_array($rec)) {
+                    ?>
+                    <div class="col-3">
+                        <div class="card">
+                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $row[5] ; ?>">
+                            <div class="img__description_layer">
+                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $row[0] ?>"><?php echo $row[2];?></a></h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-tittle"><?php echo $row[2];?></h5>
+                                <h3 class="card-text">$ <?php echo $row[1];?></h3>
+                            </div>
+                        </div> 
+                    </div><?php
+                    }
+                }
+                ?>
         </div>
     </div>
-    <!--Producto-->
-
-    <!--Te puede interesar-->
-    <div class="container mas-art">
-        <div class="row">
-            <div class="col-12">
-                <h2>Tambien te puede interesar</h2>
-                <hr>
-            </div>
-            <div class="col-12">
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <div class="card">
-                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen1 ; ?>">
-                            <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id1 ?>"><?php echo $nombre1;?></a></h5>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-tittle"><?php echo $nombre1;?></h5>
-                                <h3 class="card-text">$ <?php echo $precio1;?></h3>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <div class="card">
-                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen2 ; ?>">
-                            <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id2 ?>"><?php echo $nombre2;?></a></h5>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-tittle"><?php echo $nombre2;?></h5>
-                                <h3 class="card-text">$ <?php echo $precio2;?></h3>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <div class="card">
-                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen3 ; ?>">
-                            <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id3 ?>"><?php echo $nombre3;?></a></h5>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-tittle"><?php echo $nombre3;?></h5>
-                                <h3 class="card-text">$ <?php echo $precio3;?></h3>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <div class="card">
-                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen4 ; ?>">
-                            <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id4 ?>"><?php echo $nombre4;?></a></h5>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-tittle"><?php echo $nombre4;?></h5>
-                                <h3 class="card-text">$ <?php echo $precio4;?></h3>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--Te puede interesar-->
+    <!--Artiulos-->
 
     <!--FOOTER -->
     <div class="container-fluid footer-custom">

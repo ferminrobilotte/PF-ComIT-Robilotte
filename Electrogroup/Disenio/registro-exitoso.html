@@ -38,8 +38,8 @@
             <a href="principal.php" class="navbar-brand">
                 <img class="img-fluid" src="Captura.png" width="70" height="60" alt="logo">
             </a>
-            <form class="form-inline" type="search" placeholder="Search" aria-label="Search">
-                <input class="form-control" type="search" size="60" placeholder="¿Qué estás buscando?" aria-label="Search">
+            <form class="form-inline" method="post" action="buscar.php" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="search" size="60" placeholder="¿Qué estás buscando?" aria-label="Search" name="busqueda">
                 <button class="btn btn-outline" type="submit"><img src="Vectores/lupa2.png" width="20" height="20"></button>
             </form>
             <ul class="navbar-nav">
@@ -122,22 +122,22 @@
     <div class="container-fluid nav-custom">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link anim-underline" href="#" id="informatica" >TV e Informatica</a>
+                <a class="nav-link anim-underline" href="buscar-inf-tv.php" id="informatica" ><strong>TV e Informatica</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="electrodomesticos" href="#">Electrodomesticos y Climatizacion</a>
+                <a class="nav-link anim-underline" id="electrodomesticos" href="buscar-elec-cli.php"><strong>Electrodomesticos y Climatizacion</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="salud" href="#">Cuidado personal y Salud</a>
+                <a class="nav-link anim-underline" id="salud" href="buscar-pers-salud.php"><strong>Cuidado personal y Salud</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="lavado" href="#">Lavado y Limpieza</a>
+                <a class="nav-link anim-underline" id="lavado" href="buscar-lav-limp.php"><strong>Lavado y Limpieza</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="cocina" href="#">Cocina, Heladeras y Freezers</a>
+                <a class="nav-link anim-underline" id="cocina" href="buscar-coc.php"><strong>Cocina, Heladeras y Freezers</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="otros" href="#">Otros</a>
+                <a class="nav-link anim-underline" id="otros" href="buscar-otros.php"><strong>Otros</strong></a>
             </li>
         </ul>
     </div>

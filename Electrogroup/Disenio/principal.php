@@ -45,9 +45,9 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
             <a href="principal.php" class="navbar-brand">
                 <img class="img-fluid" src="Captura.png" width="70" height="60" alt="logo">
             </a>
-            <form class="form-inline" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline" method="post" action="buscar.php" type="search" placeholder="Search" aria-label="Search">
                 <input class="form-control" type="search" size="60" placeholder="¿Qué estás buscando?" aria-label="Search" name="busqueda">
-                <button class="btn btn-outline" type="button" onclick="location.href='busqueda.php'"><img src="Vectores/lupa2.png" width="20" height="20"></button>
+                <button class="btn btn-outline" type="submit"><img src="Vectores/lupa2.png" width="20" height="20"></button>
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -146,22 +146,22 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
     <div class="container-fluid nav-custom">
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link anim-underline" href="busqueda.php" id="informatica" ><strong>TV e Informatica</strong></a>
+                <a class="nav-link anim-underline" href="buscar-inf-tv.php" id="informatica" ><strong>TV e Informatica</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="electrodomesticos" href="busqueda.php"><strong>Electrodomesticos y Climatizacion</strong></a>
+                <a class="nav-link anim-underline" id="electrodomesticos" href="buscar-elec-cli.php"><strong>Electrodomesticos y Climatizacion</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="salud" href="busqueda.php"><strong>Cuidado personal y Salud</strong></a>
+                <a class="nav-link anim-underline" id="salud" href="buscar-pers-salud.php"><strong>Cuidado personal y Salud</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="lavado" href="busqueda.php"><strong>Lavado y Limpieza</strong></a>
+                <a class="nav-link anim-underline" id="lavado" href="buscar-lav-limp.php"><strong>Lavado y Limpieza</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="cocina" href="busqueda.php"><strong>Cocina, Heladeras y Freezers</strong></a>
+                <a class="nav-link anim-underline" id="cocina" href="buscar-coc.php"><strong>Cocina, Heladeras y Freezers</strong></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link anim-underline" id="otros" href="busqueda.php"><strong>Otros</strong></a>
+                <a class="nav-link anim-underline" id="otros" href="buscar-otros.php"><strong>Otros</strong></a>
             </li>
         </ul>
     </div>
