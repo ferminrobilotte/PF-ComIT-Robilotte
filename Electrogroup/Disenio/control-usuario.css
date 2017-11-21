@@ -165,7 +165,7 @@ body{
 }
 
 .col-custom2 .btn{
-	margin-top: 35px;
+	margin-top: 18px;
 	background-color: #F781F3;
 	color:#FFFFFF;
 	align-items: center;
@@ -178,6 +178,13 @@ body{
 }
 .col-custom2 .btn:focus{
 	box-shadow: none;
+}
+.col-compras{
+	font-family: 'Ubuntu', sans-serif;
+	margin-top: 30px;
+	text-align: center;
+	color: #666;
+	
 }
 /* */
 

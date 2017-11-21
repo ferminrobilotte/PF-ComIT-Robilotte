@@ -25,6 +25,38 @@ $(function(){
     		e.preventDefault();
     	} 
     });
+    $(document).on("click", ".iniciar", function(e){
+        var email= $('#email-usuario').val();
+        var contraseña= $("#contraseña-usuario").val();
+
+        if ($.trim(email).length == 0) {
+            alert('Ingrese un email');
+            e.preventDefault();
+        }
+        if ($.trim(contraseña).length == 0) {
+            alert('Ingrese una contraseña');
+            e.preventDefault();
+        }
+
+        var params = {
+            "email" : email,
+            "contraseña" : contraseña
+        };
+        $.ajax({
+            type:  'post',
+            data:  {email:email,contraseña:contraseña},
+            url:   '../Logica/Iniciar_sesion/Iniciar_sesion.php',
+            success:  function (response) {
+                msg="";
+                if (response == 1) {
+                    window.location.replace = "principal.php";
+                } else{
+                    msg="Usuario o contraseña incorrecta";
+                }
+                alert(msg); 
+            }
+        });
+    });
 })
 
 
@@ -37,4 +69,6 @@ function validateEmail(sEmail) {
         return false;
     }
 }
+
+
 

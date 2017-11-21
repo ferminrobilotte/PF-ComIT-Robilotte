@@ -4,6 +4,7 @@ if (!isset($_SESSION['email'])) {
     header("Location: principal.php");
 }
 require '../Logica/Usuarios/Mostrar_Datos/mostrar_datos.php';
+require '../Logica/Compras/compras.php'
 ?>
 <!DOCTYPE html>
 <html>
@@ -188,7 +189,20 @@ require '../Logica/Usuarios/Mostrar_Datos/mostrar_datos.php';
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                    Lore lore
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-10 col-compras">
+                                    <?php if(mysqli_num_rows($rec)==0){ ?>
+                                        <div class="container">
+                                            <h5>Usted no posee compras</h5>
+                                            <img class="img-fluid" src="compras-vacias.png">
+                                        </div>
+                                    <?php ;} else{ ?>
+
+                                    <?php }; ?>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -217,7 +231,7 @@ require '../Logica/Usuarios/Mostrar_Datos/mostrar_datos.php';
                         <label for="telefono">Telefono</label>
                         <input type="tel" class="form-control telefonousuario" placeholder="Sin espacios, ni guiones" name="telefono" id="telefono">
                         <label></label>
-                        <button class="btn btn-block" id="send">Actualizar datos</button>
+                        <button class="btn btn-block" id="send-datos">Actualizar datos</button>
                         <?php if(!empty($errores)): ?>
                             <div>
                                 <ul>

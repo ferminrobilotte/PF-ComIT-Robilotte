@@ -177,6 +177,9 @@ body{
 	border-color: transparent;
 	margin-top: 5px;
 }
+.col-comprar{
+	font-family: 'Ubuntu', sans-serif;
+}
 .col-inf .comprar-custom:hover{
 	background-color: #FF00FF;
 	border: 1px solid #FF00FF;

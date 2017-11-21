@@ -197,10 +197,18 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
                             </p>
                         </div>
                     </div>
+                    <?php if($stock==0){ ?>
+                    <div class="col-12 col-comprar">
+                        <p>Sin stock</p>
+                        <button type="button" class="btn btn-primary btn-lg btn-block comprar-custom">Contactar</button>
+                        <hr>
+                    </div>
+                    <?php } else { ?>
                     <div class="col-12 col-comprar">
                         <button type="button" class="btn btn-primary btn-lg btn-block comprar-custom">Comprar</button>
                         <hr>
                     </div>
+                    <?php }; ?> 
                     <div class="col-12 envios">
                         <img src="Vectores/delivery.png" width="30" height="30">
                         <p>Envios a todo el país</p>

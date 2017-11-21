@@ -2,7 +2,7 @@ $(function(){
   $('[data-toggle="popover"]').popover();
   $('#micuenta').popover();
 
-  $('#send').click(function(e) {
+  $('#send-datos').click(function(e) {
       var nombreusuario = ($('.nombreusuario').val());
       var apellidousuario = ($('.apellidousuario').val());
       var dniusuario = ($('.dniusuario').val());

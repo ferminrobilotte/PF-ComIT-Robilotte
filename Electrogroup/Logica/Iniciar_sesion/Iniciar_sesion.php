@@ -28,8 +28,8 @@ while ($result = mysqli_fetch_object($rec)){
 }
 
 if($verificar == 1){
-header ("Location: ../../Disenio/principal.php");
-$_SESSION['email'] = $email;
+	$_SESSION['email'] = $email;
+	echo 1;
 } else{
-    echo "la contraeña o el email no son de un usuario registrado";
+    echo 0;
 }
