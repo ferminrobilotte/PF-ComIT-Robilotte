@@ -25,6 +25,27 @@ $(function(){
     		e.preventDefault();
     	} 
     });
+
+    $(document).on("click", "#send", function(e){
+        var email = $('.email-usuario').val();
+        var contraseña= $(".contraseña-usuario").val();
+
+        $.ajax({
+            type:  'post',
+            data:  {email:email,contraseña:contraseña},
+            url:   '../Logica/Usuarios/Registrar_usuario/Registrar_usuario.php',
+            success:  function (response) {
+                msg="";
+                if (response == 1) {
+                    window.location.replace = "registro-exitoso.html";
+                } else{
+                    msg="El email ya corresponde a un usuario registrado";
+                    alert(msg);
+                }
+            }
+        });
+    });
+    
     $(document).on("click", ".iniciar", function(e){
         var email= $('#email-usuario').val();
         var contraseña= $("#contraseña-usuario").val();
@@ -49,11 +70,11 @@ $(function(){
             success:  function (response) {
                 msg="";
                 if (response == 1) {
-                    window.location.replace = "principal.php";
+                    //window.location.replace = "principal.php";
                 } else{
                     msg="Usuario o contraseña incorrecta";
+                    alert(msg);
                 }
-                alert(msg); 
             }
         });
     });

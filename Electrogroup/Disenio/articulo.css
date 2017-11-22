@@ -34,7 +34,7 @@ body{
 	margin-left: 30px;
 }
 .navbar-custom .form-control{
-	border-color:#F781F3;
+	border-color:#D8D8D8;
 	border-radius: 2px 0 0 2px;
 }
 .navbar-custom .form-control:focus{

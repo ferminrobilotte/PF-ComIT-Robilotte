@@ -26,9 +26,10 @@ if(!$conn){
         if($verificar==0){
             $sql = "INSERT INTO clientes(email, contrasenia) VALUES ('$email','$contraseña')";
             mysqli_query($conn, $sql);
-            header ("Location: ../../../Disenio/registro-exitoso.html");
+            echo 1;
+            //header ("Location: ../../../Disenio/registro-exitoso.html");
         }
         else{
-            echo "el email ya esta registrado";
+            echo 0;
         }
 ?>

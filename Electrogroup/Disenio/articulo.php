@@ -21,10 +21,11 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
     <!--FONTS-->
 
     <!--JS-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="index.js"></script>
     <script src="control-usuario.js"></script>
+    <script src="articulo.js?ts=<?=time()?>&quot;"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <!--JS-->
 
@@ -172,7 +173,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
         </div>
     </div>
     <!--Marcas-->
-
+    
     <!--Producto-->
     <div class="container articulo-custom">
         <div class="row">
@@ -236,7 +237,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
                         <div class="card">
                             <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen1 ; ?>">
                             <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id1 ?>"><?php echo $nombre1;?></a></h5>
+                                <h5 class="img__description"><a href="articulo.php?id=<?php echo $id1 ?>"><?php echo $nombre1;?></a></h5>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-tittle"><?php echo $nombre1;?></h5>
@@ -248,7 +249,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
                         <div class="card">
                             <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen2 ; ?>">
                             <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id2 ?>"><?php echo $nombre2;?></a></h5>
+                                <h5 class="img__description"><a href="articulo.php?id=<?php echo $id2 ?>"><?php echo $nombre2;?></a></h5>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-tittle"><?php echo $nombre2;?></h5>
@@ -260,7 +261,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
                         <div class="card">
                             <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen3 ; ?>">
                             <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id3 ?>"><?php echo $nombre3;?></a></h5>
+                                <h5 class="img__description"><a href="articulo.php?id=<?php echo $id3 ?>"><?php echo $nombre3;?></a></h5>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-tittle"><?php echo $nombre3;?></h5>
@@ -272,7 +273,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_articulo.php';
                         <div class="card">
                             <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen4 ; ?>">
                             <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $id4 ?>"><?php echo $nombre4;?></a></h5>
+                                <h5 class="img__description"><a href="articulo.php?id=<?php echo $id4 ?>"><?php echo $nombre4;?></a></h5>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-tittle"><?php echo $nombre4;?></h5>

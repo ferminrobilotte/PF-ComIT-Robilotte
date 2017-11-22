@@ -124,7 +124,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="../Logica/Usuarios/Registrar_usuario/Registrar_usuario.php" method="post" class="form-group">
+                    <form method="post" class="form-group">
                         <label for="email-usuario">Email</label>
                         <input type="email" class="form-control email-usuario" placeholder="Ingrese un email valido" name="email">
                         <label for="contraseña-usuario">Contraseña</label>
@@ -223,7 +223,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen1 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id1 ?>"><?php echo $nombre1;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id1 ?>"><?php echo $nombre1;?></a></h5>
                         </div>
                         <div class="card-busqueda.phpblock">
                             <h5 class="card-tittle"><?php echo $nombre1;?></h5>
@@ -233,7 +233,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen2 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id2 ?>"><?php echo $nombre2;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id2 ?>"><?php echo $nombre2;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre2;?></h5>
@@ -243,7 +243,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen3 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id3 ?>"><?php echo $nombre3;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id3 ?>"><?php echo $nombre3;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre3;?></h5>
@@ -253,7 +253,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen4 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id4 ?>"><?php echo $nombre4;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id4 ?>"><?php echo $nombre4;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre4;?></h5>
@@ -285,7 +285,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_1 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_1 ?>"><?php echo $nombre_1;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id_1 ?>"><?php echo $nombre_1;?></a></h5>
                         </div>
                         <div class="card-busqueda.phpblock">
                             <h5 class="card-tittle"><?php echo $nombre_1;?></h5>
@@ -295,7 +295,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_2 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_2 ?>"><?php echo $nombre_2;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id_2 ?>"><?php echo $nombre_2;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre_2;?></h5>
@@ -305,7 +305,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_3 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_3 ?>"><?php echo $nombre_3;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id_3 ?>"><?php echo $nombre_3;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre_3;?></h5>
@@ -315,7 +315,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_4 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_4 ?>"><?php echo $nombre_4;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id_4 ?>"><?php echo $nombre_4;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre_4;?></h5>
@@ -337,7 +337,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_coc1 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_coc1 ?>"><?php echo $nombre_coc1;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id_coc1 ?>"><?php echo $nombre_coc1;?></a></h5>
                         </div>
                         <div class="card-busqueda.phpblock">
                             <h5 class="card-tittle"><?php echo $nombre_coc1;?></h5>
@@ -347,7 +347,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_coc2 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_coc2 ?>"><?php echo $nombre_coc2;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id_coc2 ?>"><?php echo $nombre_coc2;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre_coc2;?></h5>
@@ -357,7 +357,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_coc3 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_coc3 ?>"><?php echo $nombre_coc3;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id_coc3 ?>"><?php echo $nombre_coc3;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre_coc3;?></h5>
@@ -367,7 +367,7 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
                     <div class="card">
                         <img src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $imagen_coc4 ; ?>" class="card-image-top img-fluid">
                         <div class="img__description_layer">
-                            <h5 class="img__description"><a href="articulo.php?id= <?php echo $id_coc4 ?>"><?php echo $nombre_coc4;?></a></h5>
+                            <h5 class="img__description"><a href="articulo.php?id=<?php echo $id_coc4 ?>"><?php echo $nombre_coc4;?></a></h5>
                         </div>
                         <div class="card-block">
                             <h5 class="card-tittle"><?php echo $nombre_coc4;?></h5>

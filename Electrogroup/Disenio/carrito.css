@@ -38,11 +38,11 @@ body{
 	border-color:#D8D8D8;
 	border-radius: 2px 0 0 2px;
 }
+}
 .navbar-custom .form-control:focus{
 	border-color:#FFFFFF;
 	box-shadow: 0 0 1em #F781F3;
 }
-
 .btn-modal-custom{
 	background-color: transparent;
 	border:none;
@@ -110,88 +110,6 @@ body{
   transform: scaleX(1);
 }
 /*Barra categorias*/
-
-
-/*Articulos*/
-.marcas{
-	margin-top: 20px;
-	font-family: 'Roboto', sans-serif;
-}
-.marcas p{
-	display: inline;
-	font-size: 15px;
-}
-.marcas a{
-	color: #016AB3;
-	font-size: 15px;
-}
-.articulos{
-	border: 1px solid #D8D8D8;
-	margin-top: 30px;
-	margin-bottom: 20px;
-	background-color: white;
-	box-shadow: 0 0 1em #D8D8D8;
-	border-radius: 4px;
-}
-.card{
-	border-color: #D8D8D8;
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-.card:hover{
-	border-color: #FF00FF;
-}
-.card:hover img{
-	opacity: 0.1;
-}
-.card:hover .card-tittle{
-	visibility: hidden;
-}
-
-.card img{
-	height: 211.25px;
-	width: auto;
-	margin-top: 5px;
-}
-.card .card-tittle{
-	height: 40px;
-	font-size: 18px;
-	text-align: center;
-}
-.card-text{
-	color: #B40404;
-	text-align: center;
-}
-.img__description_layer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: #FF00FF;
-  visibility: hidden;
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
-}
-
-.img__description {
-  transition: .2s;
-  transform: translateY(1em);
-  font-size: 15px;
-}
-.card:hover .img__description_layer{
-	visibility: visible;
-  	opacity: 1;
-}
-.card:hover .img__description {
-  transform: translateY(0);
-}
-/*Articulos*/
 
 /*Footer*/
 .footer-custom{

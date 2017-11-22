@@ -220,7 +220,7 @@ $cantidad= mysqli_num_rows($rec);
                         <div class="card">
                             <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $row[5] ; ?>">
                             <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id= <?php echo $row[0] ?>"><?php echo $row[2];?></a></h5>
+                                <h5 class="img__description"><a href="articulo.php?id=<?php echo $row[0] ?>"><?php echo $row[2];?></a></h5>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-tittle"><?php echo $row[2];?></h5>

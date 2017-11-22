@@ -10,7 +10,7 @@ if(!$conn){
     die("Connection failed: " . mysqli_connect_error());
 }
 $id=$_GET['id'];
-
+json_encode($id);
 $sql="SELECT precio, nombre, imagen, categoria, marca, descripcion, stock FROM articulo WHERE idArticulo='$id'";
 $rec=mysqli_query($conn, $sql);
 

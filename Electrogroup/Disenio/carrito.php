@@ -1,22 +1,7 @@
 <?php
 session_start();
-require 'conexion.php';
-$conn=conectar();
-$busqueda=$_POST['busqueda'];
-//$valor=$_POST['precio'];
-$sql="SELECT * FROM articulo WHERE Categoria LIKE '%$busqueda%' OR Marca LIKE '%$busqueda%' OR Nombre LIKE '%$busqueda%'";
-//if($valor=='mayor'){
-  //  $sql="SELECT * FROM articulo WHERE Categoria LIKE '%$busqueda%' OR Marca LIKE '%$busqueda%' OR Nombre LIKE '%$busqueda%' ORDER BY Precio ASC";
-//};
-//if($valor=='menor'){
-  //  $sql="SELECT * FROM articulo WHERE Categoria LIKE '%$busqueda%' OR Marca LIKE '%$busqueda%' OR Nombre LIKE '%$busqueda%' ORDER BY Precio DESC";
-//};
-
-$rec= mysqli_query($conn, $sql);
-
-$cantidad= mysqli_num_rows($rec);
+require '../Logica/Compras/carrito-compras.php'
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +13,7 @@ $cantidad= mysqli_num_rows($rec);
 
     <!--CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="busqueda.css?ts=<?=time()?>&quot;" type="text/css">
+    <link rel="stylesheet" href="carrito.css?ts=<?=time()?>&quot;" type="text/css">
     <!--CSS-->
 
     <!--FONTS -->
@@ -36,7 +21,7 @@ $cantidad= mysqli_num_rows($rec);
     <!--FONTS-->
 
     <!--JS-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="index.js"></script>
     <script src="control-usuario.js"></script>
@@ -106,13 +91,14 @@ $cantidad= mysqli_num_rows($rec);
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="../Logica/Iniciar_sesion/Iniciar_sesion.php" method="post" class="form-group">
+                    <form class="form-group" method="post">
                         <label for="email-usuario">Email</label>
                         <input type="email" class="form-control" name="email" id="email-usuario">
                         <label for="contraseña-usuario">Contraseña</label>
                         <input type="password" class="form-control" name="contraseña" id="contraseña-usuario">
                         <label></label>
-                        <button class="btn btn-block">Iniciar sesion</button>
+                        <div class="resultado"></div>
+                        <button class="btn btn-block iniciar">Iniciar sesion</button>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -136,7 +122,7 @@ $cantidad= mysqli_num_rows($rec);
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="../Logica/Usuarios/Registrar_usuario/Registrar_usuario.php" method="post" class="form-group">
+                    <form method="post" class="form-group">
                         <label for="email-usuario">Email</label>
                         <input type="email" class="form-control email-usuario" placeholder="Ingrese un email valido" name="email">
                         <label for="contraseña-usuario">Contraseña</label>
@@ -151,90 +137,10 @@ $cantidad= mysqli_num_rows($rec);
           </div>
       </div>
       <!--Ventana registro-->
-
     </div>
     <!--Fin barra fija-->
 
-    <!--Barra de categorias-->
-    <div class="container-fluid nav-custom">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link anim-underline" href="buscar-inf-tv.php" id="informatica" ><strong>TV e Informatica</strong></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link anim-underline" id="electrodomesticos" href="buscar-elec-cli.php"><strong>Electrodomesticos y Climatizacion</strong></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link anim-underline" id="salud" href="buscar-pers-salud.php"><strong>Cuidado personal y Salud</strong></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link anim-underline" id="lavado" href="buscar-lav-limp.php"><strong>Lavado y Limpieza</strong></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link anim-underline" id="cocina" href="buscar-coc.php"><strong>Cocina, Heladeras y Freezers</strong></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link anim-underline" id="otros" href="buscar-otros.php"><strong>Otros</strong></a>
-            </li>
-        </ul>
-    </div>
-    <!--Fin Barra de categorias-->
-    
-    <!--Marcas-->
-    <div class="container">
-        <div class="row">
-            <div class="col-6 marcas">
-                <p><?php echo $cantidad; ?> resultados para </p><a href="principal.php">Electrogroup</a> > <p><?php echo $busqueda; ?></p>  
-            </div>
-            <!--<div class="col-6">
-                <form method="post" action="buscar.php">
-                <select type="submit" name="precio" id="precio">
-                    <option value="nombre">Nombre</option>
-                    <option value="menor">Menor precio</option>
-                    <option value="mayor">Mayor precio</option>
-                </select>
-                </form>
-            </div>-->
-        </div>
-        <hr>
-    </div>
-    <!--Marcas-->
-
-    <!--Artiulos-->
-    <div class="container">
-        <div class="row">
-                <?php 
-                if ($cantidad==0){ 
-                    ?>
-                    <div class="container">
-                        <div class="alert alert-danger" role="alert">
-                            <h4 class="alert-heading">No hay resultados para esta busqueda</h4>
-                            <hr>
-                            <p>-<strong>Revise la ortografia de</strong> la palabra</p>
-                            <p>-Utilice <strong>palabras mas genericas</strong> en su busqueda</p>
-                        </div>
-                    </div>
-                <?php } else{
-                    while ($row=mysqli_fetch_array($rec)) {
-                    ?>
-                    <div class="col-3">
-                        <div class="card">
-                            <img class="card-img-top" src="../Electrogroup_img/PRODUCTOS ELECTROGROUP/<?php echo $row[5] ; ?>">
-                            <div class="img__description_layer">
-                                <h5 class="img__description"><a href="articulo.php?id=<?php echo $row[0] ?>"><?php echo $row[2];?></a></h5>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-tittle"><?php echo $row[2];?></h5>
-                                <h3 class="card-text">$ <?php echo $row[1];?></h3>
-                            </div>
-                        </div> 
-                    </div><?php
-                    }
-                }
-                ?>
-        </div>
-    </div>
-    <!--Artiulos-->
+    <?php echo $id?>
 
     <!--FOOTER -->
     <div class="container-fluid footer-custom">
@@ -261,4 +167,3 @@ $cantidad= mysqli_num_rows($rec);
 </body>
 
 </html>
-

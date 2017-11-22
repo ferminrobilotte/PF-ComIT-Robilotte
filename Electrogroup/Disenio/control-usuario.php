@@ -25,7 +25,7 @@ require '../Logica/Compras/compras.php'
     <!--FONTS-->
 
     <!--JS-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="control-usuario.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
@@ -257,7 +257,7 @@ require '../Logica/Compras/compras.php'
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="../Logica/Usuarios/Actualizar_usuario/actualizar_contrasenia.php" method="post" class="form-group">
+                    <form method="post" class="form-group">
                         <label for="nombre">Contraseña actual</label>
                         <input type="password" class="form-control contraseña-actual" name="contraseña-actual" id="contraseña-actual">
                         <label for="apellido">Contraseña nueva</label>
@@ -265,7 +265,7 @@ require '../Logica/Compras/compras.php'
                         <label for="dni">Repetir contraseña</label>
                         <input type="password" class="form-control repetir-contraseña" name="repetir-contraseña" id="repetir-contraseña">
                         <label></label>
-                        <button class="btn btn-block" id="send-contraseña">Actualizar contraseña</button>
+                        <button class="btn btn-block" id="send-contrasenia">Actualizar contraseña</button>
                     </form>
                 </div>
             </div>          

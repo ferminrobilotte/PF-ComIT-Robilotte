@@ -6,7 +6,7 @@ $password= "pincharata38531662";
 $dbname="electrogroup_db";
 
 $email= $_SESSION['email'];
-$contraseña= $_POST['contraseña-actual'];
+$contraseña= $_POST['contraseñaactual'];
 $contraseña= hash("sha512",$contraseña);
 $contraseña_nueva= $_POST['contraseña-nueva'];
 $contraseña_nueva= hash("sha512",$contraseña_nueva);
@@ -34,7 +34,7 @@ while ($result = mysqli_fetch_object($rec)){
 if($verificar == 1){
 	$sql="UPDATE clientes SET contrasenia='$contraseña_nueva' WHERE email='$email'";
 	mysqli_query($conn, $sql);
-	header("Location: ../../../Disenio/control-usuario.php");
+    echo 1;
 } else{
-	$errores='<li>La contraseña no coincide con la actual</li>';
+    echo 0;
 }
