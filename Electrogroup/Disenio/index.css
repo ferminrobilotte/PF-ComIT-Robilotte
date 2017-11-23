@@ -164,8 +164,8 @@ body{
 
 /*Productos*/
 .container-card{
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 .container-card h2{
 	margin-bottom: 15px;

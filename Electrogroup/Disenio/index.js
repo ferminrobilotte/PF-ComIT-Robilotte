@@ -37,7 +37,7 @@ $(function(){
             success:  function (response) {
                 msg="";
                 if (response == 1) {
-                    window.location.replace = "registro-exitoso.html";
+                    location.href = ("registro-exitoso.html");
                 } else{
                     msg="El email ya corresponde a un usuario registrado";
                     alert(msg);

@@ -24,7 +24,7 @@ while($result = mysqli_fetch_object($rec)){
 	$stock=$result->stock;
 }
 
-$sql="SELECT * FROM articulo WHERE Categoria='$categoria' OR Marca='$marca' order by RAND() LIMIT 4";
+$sql="SELECT * FROM articulo WHERE (Categoria='$categoria' OR Marca='$marca') AND Nombre!='$nombre' order by RAND() LIMIT 4";
 $rec= mysqli_query($conn, $sql);
 
 $row=mysqli_fetch_array($rec,MYSQLI_NUM);
