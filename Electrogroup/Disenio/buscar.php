@@ -36,7 +36,7 @@ $cantidad= mysqli_num_rows($rec);
     <!--FONTS-->
 
     <!--JS-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="index.js"></script>
     <script src="control-usuario.js"></script>
@@ -106,13 +106,14 @@ $cantidad= mysqli_num_rows($rec);
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="../Logica/Iniciar_sesion/Iniciar_sesion.php" method="post" class="form-group">
+                    <form class="form-group" method="post">
                         <label for="email-usuario">Email</label>
                         <input type="email" class="form-control" name="email" id="email-usuario">
                         <label for="contraseña-usuario">Contraseña</label>
                         <input type="password" class="form-control" name="contraseña" id="contraseña-usuario">
                         <label></label>
-                        <button class="btn btn-block">Iniciar sesion</button>
+                        <div class="resultado"></div>
+                        <button class="btn btn-block iniciar">Iniciar sesion</button>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -136,7 +137,7 @@ $cantidad= mysqli_num_rows($rec);
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="../Logica/Usuarios/Registrar_usuario/Registrar_usuario.php" method="post" class="form-group">
+                    <form method="post" class="form-group">
                         <label for="email-usuario">Email</label>
                         <input type="email" class="form-control email-usuario" placeholder="Ingrese un email valido" name="email">
                         <label for="contraseña-usuario">Contraseña</label>

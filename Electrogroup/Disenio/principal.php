@@ -25,8 +25,8 @@ require '../Logica/Articulos/Mostrar_art/mostrar_art_coc.php';
     <!--JS-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="index.js"></script>
-    <script src="control-usuario.js"></script>
+    <script src="index.js?ts=<?=time()?>&quot;"></script>
+    <script src="control-usuario.js?ts=<?=time()?>&quot;"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <!--JS-->
 

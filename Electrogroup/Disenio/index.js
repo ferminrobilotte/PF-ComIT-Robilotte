@@ -70,7 +70,7 @@ $(function(){
             success:  function (response) {
                 msg="";
                 if (response == 1) {
-                    //window.location.replace = "principal.php";
+                    location.href = ("principal.php");
                 } else{
                     msg="Usuario o contraseña incorrecta";
                     alert(msg);
